@@ -1,0 +1,26 @@
+﻿<style type="text/css">
+	#address .list-group{position: absolute;top: 10%;left: 5%;right: 5%;border-radius: 5px;max-height: 60vh;overflow-y: auto;}
+	#address .list-group .list-group-item-text{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+	#address i{position: absolute;bottom: 10%;left: 50%;color: white;transform: translateX(-50%);}
+</style>
+<div ng-controller="conadd">
+	  <div class="list-group">
+		  <a href="#" class="list-group-item" ng-repeat="address in data">
+		    <h5 class="list-group-item-heading" ng-bind="address[0]"></h5><span ng-bind="address[1]"></span>
+		    <p class="list-group-item-text" ng-bind="address[2]"></p>
+		  </a>
+	</div>
+	<i class="fa fa-plus-circle fa-4x" ></i>
+</div>
+
+<script type="text/javascript">
+		myApp.register.controller('conadd', ['$scope','$http', function ($scope,$http) {
+			$http.get('get_address.php').success(function(response){
+				
+				$scope.data = response;
+				if (!response[0][0]) {
+					$scope.data= [["请添加收货信息"]]
+				}
+			})
+		}])
+</script>

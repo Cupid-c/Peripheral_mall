@@ -1,0 +1,79 @@
+﻿<style type="text/css">
+	#address form{position: absolute;top: 10%;left: 5%;right: 5%;border-radius: 5px;max-height: 80vh;overflow-y: auto;}
+	#address form .input-group{margin-bottom: 5px;min-height: 34px;}
+	#address button{position: fixed;bottom: 20%;left: 50%;color: white;transform: translateX(-50%);border: 0 ;background-color: transparent;}
+</style>
+<form id="fro" ng-controller="conarea">
+	<div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1">收货人</span>
+	  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" required="" ng-model="name">
+	</div>
+	<div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1">收货人电话</span>
+	  < input type="text" class="form-control" placeholder="consignee" ng-model="phone" aria-describedby="basic-addon1" required="" pattern="[1][3|4|5|7|8][0-9]{9}" pm="请输入正确的手机格式">
+	</div>
+	<div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1" >收货人地址</span>
+		<select class="form-control" ng-model="province" required="" id="province">
+		 <option value="" >选择省</option>
+         <option ng-repeat="p in place | filter:prov" value="{{p.sheng}}" ng-bind="p.name"></option>
+		</select>
+		<select class="form-control" ng-model="city" required="" id="city">
+		  <option value="" >选择城市</option>
+         <option ng-repeat="c in place | filter:cit" value="{{c.di}}" ng-bind="c.name"></option>
+		</select>
+		<select class="form-control" ng-model="district" required="" id="district">
+		  <option value="" >选择地区</option>
+         <option ng-repeat="d in place | filter:dis" value="{{d.xian}}" ng-bind="d.name"></option>
+		</select>
+		<textarea class="form-control" rows="2" placeholder="详细地址" required="" ng-model="area"></textarea>
+	</div>	
+	<!--<div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1" required="" >邮政编码</span>
+	  <input type="text" class="form-control" placeholder="postal" aria-describedby="basic-addon1" ng-model="post">
+	</div>-->
+	<button class="fa fa-check-circle-o fa-3x" ng-click="submit()"></button>
+	
+</form>
+
+<script type="text/javascript">
+myApp.register.controller('conarea', ['$scope','$http','$compile', function ($scope,$http,$compile) {
+			$scope.prov = function(p){
+				if (p['level']==1) {
+					return p;
+				}
+			}
+			$scope.cit = function(c){
+				if (c['level']==2 && c['sheng']==$scope.province) {
+					
+					return c;
+				}
+			}
+			$scope.dis = function(d){
+				if ( d['sheng']==$scope.province && d['level']==3 && d['di']==$scope.city) {
+					return d;
+				}
+			}
+			$http.get('place2.json').success(function(response){
+				$scope.place = response;
+			})
+			
+			$scope.submit=	function(){
+				if($("#fro")[0].checkValidity()){
+					$scope.option1=$("#province option:selected").text();
+					$scope.option2=$("#city option:selected").text();
+					$scope.option3=$("#district option:selected").text();
+					$scope.addressee=$scope.name+"&"+$scope.phone+"&"+$scope.option1+$scope.option2+$scope.option3+$scope.area;
+					$http.post('set_address.php',{addressee:$scope.addressee}).success(function(response){
+						if (response.state) {
+							$http.get('order_address.html').success(function(response){
+								$compile($('#address').html(response))($scope);
+							})
+						}else{
+							alert("请重试");
+						}
+					})
+				}
+		} 
+}])
+</script>

@@ -1,0 +1,42 @@
+#login_form {
+  position: absolute;
+  top: 45px;
+  padding: 3px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 400px; }
+  #login_form ul li {
+    padding: 4px 0; }
+    #login_form ul li input {
+      padding: 3px 2px;
+      -webkit-box-flex: 1; }
+  #login_form ul li:nth-child(1) {
+    overflow: hidden; }
+    #login_form ul li:nth-child(1) input {
+      float: left; }
+    #login_form ul li:nth-child(1) input:nth-child(1) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      width: 30%; }
+    #login_form ul li:nth-child(1) input:nth-child(2) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      width: 70%; }
+  #login_form ul li:nth-child(2) {
+    position: relative; }
+    #login_form ul li:nth-child(2) a {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+  #login_form ul input.btn {
+    background: black;
+    color: white;
+    font-weight: bold; }
+  #login_form ul .tips {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 7px; }
+    #login_form ul .tips a {
+      color: #666;
+      font-size: 16px; }

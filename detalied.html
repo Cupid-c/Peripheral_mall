@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title></title>
+		<script src="libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="libs/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery/jquery.lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="libs/iscroll/build/iscroll.js" type="text/javascript" charset="utf-8"></script>  
+		<link rel="stylesheet" type="text/css" href="libs\font-awesome\css\font-awesome.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="libs\swiper\dist\css\swiper.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+	    <script src="libs/js/guid.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	    <script src="libs\swiper\dist\js\swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	    
+	    
+	    <link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/dist/jquery-confirm.min.css"/>
+	    <script type="text/javascript" src="libs\jquery-confirm-master\dist/jquery-confirm.min.js"></script>
+	    <script src="libs/js/detalied.js" type="text/javascript" charset="utf-8"></script>
+	    
+	</head>
+		<body>
+		<div id="header">
+			<a href="javascript:window.history.go(-1)"><i class="fa fa-chevron-left"></i></a>
+			<i class="fa fa-th-list"></i>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="list_page.html">分类查询</a></li>
+				<li><a href="cart.html">购物车</a></li>
+				<li><a href="user.html">个人中心</a></li>
+			</ul>
+			
+			<div class="detaled active">详情</div>
+			<div class="discuss">评论</div>
+		</div>
+		
+		<div id="wrapper" class="detalied">
+			<div id="scroller" >
+				<ul class="det" ng-app="detaApp" ng-controller="cfcontrnller">
+					<li>
+						<div class="swiper-container detalied">
+						    <div class="swiper-wrapper">
+						        <div class="swiper-slide" style="background-image: url(libs/img/a2.jpg);"></div>
+						        <div class="swiper-slide" style="background-image: url(libs/img/b2.jpg);"></div>
+						        <div class="swiper-slide" style="background-image: url(libs/img/c2.jpg);"></div>
+						        <div class="swiper-slide" style="background-image: url(libs/img/d2.jpg);"></div>
+						    </div>
+						    <div class="swiper-pagination"></div>
+						</div>
+					</li>
+					<li class="name" ng-bind="name"></li>
+					<li class="pri" >¥<em ng-bind="pri"></em></li>
+					
+					<li><img src="libs/img/1.jpg"/></li>
+					<li><img src="libs/img/2.jpg"/></li>
+					<li><img src="libs/img/3.jpg"/></li>
+				</ul>
+				<ul class="dis">
+					<li>
+						<div class="top">
+							<div class="img"></div>匿名
+							<span>2017-1-4 17:16</span>
+						</div>
+						<div class="star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						</div>
+						<p>可以，味道还行</p>
+						<p class="time">购买时间2016-11-11 11：11</p>
+					</li>
+					
+					
+				</ul>
+			</div>			
+		</div>
+		<div id="bottom">
+			<div class="cart">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+			</div>
+			<a>立即购买</a>
+			<a>加入购物车</a>
+		</div>
+		</body>
+</html>

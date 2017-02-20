@@ -1,0 +1,124 @@
+#wrapper.user {
+  background: whitesmoke; }
+  #wrapper.user #scroller ul li {
+    background: white;
+    box-sizing: border-box; }
+    #wrapper.user #scroller ul li > a {
+      display: block;
+      color: #666; }
+  #wrapper.user #scroller ul .main-info {
+    width: 100%;
+    background: black;
+    padding: 2vh 3vw; }
+    #wrapper.user #scroller ul .main-info a {
+      color: white; }
+      #wrapper.user #scroller ul .main-info a > * {
+        vertical-align: middle; }
+      #wrapper.user #scroller ul .main-info a i {
+        float: right;
+        margin-top: 2.7vh; }
+      #wrapper.user #scroller ul .main-info a span {
+        font-size: 18px;
+        color: goldenrod; }
+      #wrapper.user #scroller ul .main-info a #img {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3vw;
+        background-size: cover; }
+  #wrapper.user #scroller ul .wallet {
+    width: 100%;
+    overflow: hidden;
+    padding: 2vh 0; }
+    #wrapper.user #scroller ul .wallet > div {
+      float: left;
+      width: calc(100%/3);
+      box-sizing: border-box;
+      height: 7vh;
+      text-align: center; }
+      #wrapper.user #scroller ul .wallet > div a div:nth-child(1) {
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 1vh; }
+      #wrapper.user #scroller ul .wallet > div a div:nth-child(2) {
+        color: #666; }
+    #wrapper.user #scroller ul .wallet > div:first-child, #wrapper.user #scroller ul .wallet > div:nth-child(2) {
+      border-right: 1px solid #ccc; }
+  #wrapper.user #scroller ul .menber {
+    margin-top: 3vh; }
+    #wrapper.user #scroller ul .menber a {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+      padding: 3vh 3vw; }
+      #wrapper.user #scroller ul .menber a .count {
+        position: absolute;
+        height: 3vh;
+        width: 3vh;
+        background: goldenrod;
+        right: 8%;
+        top: 30%;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 3vh;
+        color: white;
+        font-size: 12px; }
+      #wrapper.user #scroller ul .menber a i:first-child {
+        float: left;
+        margin-right: 3vw; }
+      #wrapper.user #scroller ul .menber a i:last-child {
+        position: absolute;
+        right: 3vw;
+        top: 50%;
+        transform: translateY(-50%); }
+    #wrapper.user #scroller ul .menber a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background: #bbb;
+      height: 1px;
+      width: 100%;
+      transform: scaleY(0.5); }
+    #wrapper.user #scroller ul .menber a:nth-child(2) i:first-child {
+      color: gold; }
+    #wrapper.user #scroller ul .menber a:nth-child(3) i:first-child {
+      color: #2D6987; }
+    #wrapper.user #scroller ul .menber a:nth-child(3):after {
+      height: 0; }
+  #wrapper.user #scroller ul .datum {
+    margin-top: 3vh; }
+    #wrapper.user #scroller ul .datum a {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+      padding: 3vh 3vw; }
+      #wrapper.user #scroller ul .datum a i:first-child {
+        float: left;
+        margin-right: 3vw; }
+      #wrapper.user #scroller ul .datum a i:nth-child(2) {
+        float: right;
+        position: absolute;
+        right: 3vw;
+        top: 50%;
+        transform: translateY(-50%); }
+    #wrapper.user #scroller ul .datum a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background: #bbb;
+      height: 1px;
+      width: 100%;
+      transform: scaleY(0.5); }
+    #wrapper.user #scroller ul .datum a:nth-child(1) i:first-child {
+      color: darkred; }
+    #wrapper.user #scroller ul .datum a:nth-child(2) i:first-child {
+      color: blueviolet; }
+    #wrapper.user #scroller ul .datum a:nth-child(3) i:first-child {
+      color: black; }
+    #wrapper.user #scroller ul .datum a:nth-child(3):after {
+      height: 0; }

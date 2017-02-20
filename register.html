@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title></title>
+		<script src="libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/common.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="libs/jquery/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/guid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/checkValidity.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/register.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<link rel="stylesheet" type="text/css" href="libs\font-awesome\css\font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css"/>
+		
+		<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	    <link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/css/jquery-confirm.css"/>
+	    <script type="text/javascript" src="libs\jquery-confirm-master\js\jquery-confirm.js"></script>
+	</head>
+	<body>
+		<div id="header">注册
+			
+		</div>
+		<form id="register_form" ng-app="myApp" ng-controller="mycon" class="content_body">
+			<ul>
+				<li><input class="form-control" type="text" ng-model="name" name="name" id="" value="" required="" placeholder="输入昵称" pattern="([^\u0000-\u00FF]|(\w)|){1,}" pm="请输入正确格式"/></li>
+				<li>
+					<input class="form-control" type="number" name="" id="" value="86" />
+					<input class="form-control" type="text" ng-model="phone" name="phone" id="" value="" required="" pattern="[1][3|4|5|7|8][0-9]{9}" pm="请输入正确的手机格式" placeholder="输入手机号码"/>
+				</li>
+				<li>
+					<input class="form-control" type="number" name="" id="" value="" placeholder="输入短信验证码"/>
+					<button type="button" class="btn btn-default">获取验证码</button>
+				</li>
+				<li><input class="form-control" type="password" ng-model="psw" name="password" id="" value="" required="" pattern=".{6,16}" placeholder="输入密码" pm="密码要在6到16位之间"/></li>
+				<li><input class="form-control" type="password" name="confirm-pwd" id="" value="" required="" pattern=".{6,16}" placeholder="确认密码" pm="密码要在6到16位之间"/></li>
+					<input type="submit" class="btn btn-default btn-lg btn-block" ></input>
+			</ul>
+		</form>
+	</body>
+</html>

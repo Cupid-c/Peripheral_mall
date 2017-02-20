@@ -1,0 +1,26 @@
+#login_form{
+    position: absolute;top: 45px;padding: 3px 6px;width: 100%;box-sizing: border-box;
+    min-height: 400px;
+    ul{ 
+        li{
+            padding: 4px 0;
+            input{padding:3px 2px;-webkit-box-flex: 1;}
+        }
+        li:nth-child(1){
+            overflow: hidden;
+            input{float: left;}
+            input:nth-child(1){border-bottom-right-radius: 0;border-top-right-radius: 0;width: 30%;}
+            input:nth-child(2){border-bottom-left-radius: 0;border-top-left-radius: 0;width: 70%;}
+        }
+        li:nth-child(2){position: relative;
+            a{position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+        }
+        
+        input.btn{background: black;color: white;font-weight: bold;}
+        .tips{text-align: right;padding-right: 10px;padding-top: 7px;
+            a{color: #666;font-size: 16px;}
+        }
+        
+        
+    }
+}

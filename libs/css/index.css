@@ -1,0 +1,52 @@
+#wrapper {
+  z-index: 20;
+  top: 7vh;
+  bottom: 7vh;
+  left: 0;
+  background: white; }
+  #wrapper #scroller {
+    background: white; }
+    #wrapper #scroller ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      text-align: left; }
+      #wrapper #scroller ul li {
+        width: 100%; }
+        #wrapper #scroller ul li > a img {
+          width: 100%;
+          display: block; }
+      #wrapper #scroller ul .newshop {
+        display: flex;
+        height: 240px;
+        width: 100%;
+        margin-top: 1vh; }
+        #wrapper #scroller ul .newshop .pub {
+          flex: 1;
+          margin-right: 2vw; }
+          #wrapper #scroller ul .newshop .pub img {
+            height: 100%; }
+        #wrapper #scroller ul .newshop .sub {
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap; }
+          #wrapper #scroller ul .newshop .sub img {
+            width: 100%;
+            height: 100%; }
+      #wrapper #scroller ul .hotshop {
+        padding: 7px 0;
+        display: flex; }
+
+.swiper-container {
+  width: 100%;
+  height: 25vh; }
+  .swiper-container .swiper-slide > img {
+    width: 100%;
+    height: 25vh; }
+
+.swiper-container2 {
+  width: 100%; }
+  .swiper-container2 .swiper-slide img {
+    height: 18vh;
+    width: 112%; }

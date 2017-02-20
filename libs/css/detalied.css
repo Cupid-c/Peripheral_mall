@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.swiper-container.detalied {
+  margin-top: 1vh;
+  width: 100%;
+  height: 40vh;
+  background: #fff; }
+  .swiper-container.detalied .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 50vw;
+    height: 40vh; }
+
+#wrapper.detalied {
+  z-index: 20;
+  top: 7vh;
+  bottom: 7vh;
+  left: 0;
+  background: #fafafa; }
+  #wrapper.detalied #scroller ul.det {
+    width: 100%;
+    text-align: left; }
+    #wrapper.detalied #scroller ul.det li {
+      width: 100%;
+      background-color: #fafafa; }
+      #wrapper.detalied #scroller ul.det li > img {
+        width: 100%;
+        display: block; }
+    #wrapper.detalied #scroller ul.det .name {
+      padding: 10px 15px;
+      font-size: 20px;
+      color: #222;
+      font-family: "微软雅黑","宋体";
+      font-weight: bolder; }
+    #wrapper.detalied #scroller ul.det .pri {
+      padding: 5px 15px;
+      color: red;
+      font-size: 18px;
+      font-family: 'Microsoft YaHei',"Comic Sans MS","幼圆","黑体",sans-serif; }
+      #wrapper.detalied #scroller ul.det .pri em {
+        font-size: 18px; }
+  #wrapper.detalied #scroller ul.dis {
+    display: none; }
+    #wrapper.detalied #scroller ul.dis li {
+      width: 100%;
+      background: white;
+      margin-top: 1.5vh;
+      font-size: 50px;
+      padding-bottom: 1vh; }
+      #wrapper.detalied #scroller ul.dis li .top {
+        height: 8vh;
+        line-height: 8vh;
+        width: 100%;
+        padding-left: 3vw;
+        position: relative; }
+        #wrapper.detalied #scroller ul.dis li .top .img {
+          background: url(../img/tou.jpg);
+          width: 7vh;
+          height: 7vh;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 3vw; }
+        #wrapper.detalied #scroller ul.dis li .top span {
+          vertical-align: middle;
+          float: right;
+          padding-right: 6vw;
+          color: #666;
+          padding-left: 3vw; }
+      #wrapper.detalied #scroller ul.dis li .top:after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        bottom: 0;
+        background: black;
+        transform: scaleY(0.2);
+        width: 100%;
+        left: 0; }
+      #wrapper.detalied #scroller ul.dis li .star {
+        padding-top: 1vh;
+        color: goldenrod;
+        padding-left: 3vw; }
+      #wrapper.detalied #scroller ul.dis li p {
+        padding-top: 1vh;
+        color: #222222;
+        font-size: 16px;
+        padding-left: 3vw; }
+      #wrapper.detalied #scroller ul.dis li .time {
+        color: #C0C0C0;
+        padding-top: 1vh;
+        padding-left: 3vw; }

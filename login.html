@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title></title>
+
+		<script src="libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/guid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+<!--		<script src="libs/js/checkValidity.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="libs/js/login1.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="libs\font-awesome\css\font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css"/>
+		
+		
+		<link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/css/jquery-confirm.css"/>
+	    <script type="text/javascript" src="libs\jquery-confirm-master\js\jquery-confirm.js"></script>
+	</head>
+	<body>
+		<div id="header">
+		</div>
+		<form id="login_form"  ng-app="myApp" ng-controller="mycon">
+			<ul>
+				<li>
+					<input class="form-control" type="number" name="" id="" value="86" />
+					<input class="form-control" type="number" name="phone" ng-model="phone" required="" placeholder="输入手机号码"/>
+				</li>
+				<li><input class="form-control" type="password" name="password"  ng-model="psw" required=""  placeholder="输入密码" /><a>忘记密码？</a></li>
+				<li><input type="submit" class="btn btn-default btn-lg btn-block" value="登陆" ng-click="sumbit()"></li>	
+				<li class="tips"><a href="register.html">注册</a> </li>
+					
+			</ul>
+		</form>
+		
+	</body>
+</html>
